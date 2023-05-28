@@ -2,7 +2,9 @@
 
 **This repo is currently in progress**
 
-A collection of resources I found useful when writing custom gstreamer plugins in Rust. Anyone deep enough in the gstreamer ecosystem knows how painful it can be to find up to date documentation or examples.
+A collection of resources I found useful when writing custom gstreamer plugins in Rust. Anyone deep enough in the gstreamer ecosystem knows how difficult it can be to find up to date documentation or examples on specific plugins/tools. Written as a place to store all the useful resources, tools and snippets I find, I hope this can help some others also. 
+
+⚙️ Feel free to update the list with any resources you might have with a PR ⚙️
 
 ## Table of contents
 
