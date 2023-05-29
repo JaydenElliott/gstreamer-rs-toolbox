@@ -10,17 +10,21 @@ A collection of resources I found useful when writing custom gstreamer plugins i
 
 1. [Start Here](#start-here)
 2. [Primary Sources](#primary-sources)
-3. [Writing Plugins]()
-4. [Useful IDE config](#useful-ide-config)
-5. [Nvidia Deepstream](#nvidia-deepstream)
+   - [Core Gstreamer Docs](#core-gstreamer-docs)
+   - [Gst-inspect-1.0](#gst-inspect-10-cli)
+   - [Rust Bindings](#rust-bindings)
+   - [Rust Plugins](#rust-plugins)
+3. [Writing Plugins](todo)
+4. [Nvidia Deepstream](todo)
+5. [Useful IDE Config](todo)
 
 <br>
 
 ## Start Here
 
-TODO
+Todo
 
-- https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/tree/main/tutorial
+[Rust Tutorial](https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/tree/main/tutorial)
 
 Prepare to read **a lot** of plugin implementations and examples. Although there is a fair bit of documentation, it won't answer a lot of questions you will have about specifics. My usual workflow for findings answers is:
 
@@ -28,15 +32,13 @@ Prepare to read **a lot** of plugin implementations and examples. Although there
 
 # Primary Sources
 
-> 95% of your questions can be answered by reading these links
+> 95% of your questions can be answered by these
 
-<br>
+## Core Gstreamer Docs
 
-## Gstreamer docs
+[Core Gstreamer Documentation](https://gstreamer.freedesktop.org/documentation/)
 
-<https://gstreamer.freedesktop.org/documentation/>
-
-Useful links:
+For high level design overviews and core/custom plugin documentation. This should usually be your first point of call. Useful docs:
 
 - [Basic concepts (pads, elements, pipelines etc...)](https://gstreamer.freedesktop.org/documentation/application-development/introduction/basics.html?gi-language=c)
 - [Architecture and design overview](https://gstreamer.freedesktop.org/documentation/additional/design/overview.html?gi-language=c)
@@ -46,22 +48,22 @@ Useful links:
 
 <br>
 
-## CLI - gst-inspect-1.0
+## Gst-inspect-1.0 CLI
 
-<https://gstreamer.freedesktop.org/documentation/tools/gst-inspect.html?gi-language=c>
+[Gst-inspect-1.0 Documentation](https://gstreamer.freedesktop.org/documentation/tools/gst-inspect.html?gi-language=c)
 
-Essentially the gstreamer plugin reference, however allows you to query your own custom plugins and quickly verify an elements:
+Command line access to plugin documentation and allows you to query your own custom plugins to check:
 
 - Description
 - Pad capabilities
 - Properties
 - Signals
 
-This will only work for plugins you have installed (elaborate on PKG_CONFIG_PATH and /usr/lib/x86_64-linux-gnu/pkgconfig), see [writing plugins](#writing-plugins).
+This will only work for plugins you have installed (see: [installing a custom plugin in rust](https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs#building) or [in c](https://gstreamer.freedesktop.org/documentation/plugin-development/basics/boiler.html?gi-language=c#the-plugin_init-function)).
 
 <br>
 
-## Rust bindings
+## Rust Bindings
 
 [Gstreamer Rust Bindings](https://gitlab.freedesktop.org/gstreamer/gstreamer-rs)
 
@@ -77,7 +79,7 @@ This repository, as well as [gst-plugins-rs](https://gitlab.freedesktop.org/gstr
 
 ## Rust Plugins
 
-https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs
+[Gstreamer Rust Plugins](https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs)
 
 Contains endless plugin examples, a great tutorial and is constantly active. Core maintainers are very reponsive if you have any questions not covered in their examples/docs.
 
@@ -104,11 +106,13 @@ Tracers are extremely useful for monitoring pipeline throughput, element latency
 - [todo - devtool tracer parser](https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tree/main/subprojects/gst-devtools/tracer)
   - have been unable to get this working
 
+<br>
+
 ## Dot Graph Generation
 
-[Core c reference](https://gstreamer.freedesktop.org/documentation/gstreamer/debugutils.html?gi-language=c)
+[Core Dot Graph Documentation](https://gstreamer.freedesktop.org/documentation/gstreamer/debugutils.html?gi-language=c)
 
-### From rust application
+### From a rust application
 
 1. Define `GST_DEBUG_DUMP_DOT_DIR` environment variable
 
@@ -134,7 +138,7 @@ bin_ref.debug_to_dot_file(gst::DebugGraphDetails::all(), "PLAYING");
 
 ## GST_DEBUG
 
-[Documentation](https://gstreamer.freedesktop.org/documentation/tutorials/basic/debugging-tools.html?gi-language=c#the-debug-log)
+[Debug Logs Documentation](https://gstreamer.freedesktop.org/documentation/tutorials/basic/debugging-tools.html?gi-language=c#the-debug-log)
 
 Used to set the gstreamer specific log levels. Can log everything from basic errors/info logs to every event and message on the event bus.
 
@@ -170,7 +174,7 @@ TODO
 
 [GstHarness](https://gstreamer.freedesktop.org/documentation/check/gstharness.html?gi-language=c)
 
-[gstvalidate tutorial](https://blogs.igalia.com/aboya/2019/05/14/validateflow-a-new-tool-to-test-gstreamer-pipelines/)
+[GstValidate Tutorial](https://blogs.igalia.com/aboya/2019/05/14/validateflow-a-new-tool-to-test-gstreamer-pipelines/)
 
 <br>
 
@@ -186,3 +190,5 @@ todo: nvim container setup
 ## Nvidia Deepstream
 
 [Deepstream SDK](https://developer.nvidia.com/deepstream-sdk)
+
+todo
