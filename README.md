@@ -1,8 +1,8 @@
-# Gstreamer Toolbox - for Rust and C plugin development
+# 🧰 Gstreamer Toolbox (Rust and C) 🧰
 
-**This repo is currently in progress**
+**Note: The list below is currently in progress**
 
-A collection of resources I found useful when writing custom gstreamer plugins in Rust. Anyone deep enough in the gstreamer ecosystem knows how difficult it can be to find up to date documentation or examples on specific plugins/tools. Written as a place to store all the useful resources, tools and snippets I find, I hope this can help some others also. 
+A collection of useful documentation, tools, code snippets and articles for writing Gstreamer applications. Anyone deep enough in the gstreamer ecosystem knows how difficult it can be to find up to date documentation or examples on specific plugins/tools. Hopefully this guide can give you a hand navigating this space.
 
 ⚙️ Feel free to update the list with any resources you might have with a PR ⚙️
 
@@ -14,9 +14,20 @@ A collection of resources I found useful when writing custom gstreamer plugins i
    - [Gst-inspect-1.0](#gst-inspect-10-cli)
    - [Rust Bindings](#rust-bindings)
    - [Rust Plugins](#rust-plugins)
-3. [Writing Plugins](todo)
-4. [Nvidia Deepstream](todo)
-5. [Useful IDE Config](todo)
+3. [Observability](#observability)
+   - [Tracers](#tracers)
+   - [Dot Graphs](#dot-graphs)
+4. [Debugging Pipelines](#debugging-pipelines)
+   - [GST_DEBUG](#gst_debug)
+   - [Debug Probe](#debugprobe-plugin)
+   - [Gst Devtools](#debugprobe-plugin)
+   - [GstShark](#gstshark)
+5. [Profiling and Optimisation](#primary-sources)
+6. [Testing](#testing)
+   - [GstHarness](#gstharness)
+   - [GstValidate](#gstvalidate)
+7. [Nvidia Deepstream](#nvidia-deepstream)
+8. [IDE / Environment](#environment-setup)
 
 <br>
 
@@ -108,7 +119,7 @@ Tracers are extremely useful for monitoring pipeline throughput, element latency
 
 <br>
 
-## Dot Graph Generation
+## Dot Graphs
 
 [Core Dot Graph Documentation](https://gstreamer.freedesktop.org/documentation/gstreamer/debugutils.html?gi-language=c)
 
@@ -134,7 +145,7 @@ bin_ref.debug_to_dot_file(gst::DebugGraphDetails::all(), "PLAYING");
 
 <br>
 
-# Debugging
+# Debugging Pipelines
 
 ## GST_DEBUG
 
@@ -172,11 +183,21 @@ TODO
 
 # Testing
 
+## GstHarness
+
 [GstHarness](https://gstreamer.freedesktop.org/documentation/check/gstharness.html?gi-language=c)
+
+## GstValidate
 
 [GstValidate Tutorial](https://blogs.igalia.com/aboya/2019/05/14/validateflow-a-new-tool-to-test-gstreamer-pipelines/)
 
 <br>
+
+## Nvidia Deepstream
+
+[Deepstream SDK](https://developer.nvidia.com/deepstream-sdk)
+
+todo
 
 # Environment Setup
 
@@ -186,9 +207,3 @@ todo: vscode devcontainer setup for gstreamer/nvidia
 todo: nvim container setup
 
 <br>
-
-## Nvidia Deepstream
-
-[Deepstream SDK](https://developer.nvidia.com/deepstream-sdk)
-
-todo
