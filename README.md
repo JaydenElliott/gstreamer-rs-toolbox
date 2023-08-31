@@ -63,6 +63,8 @@ For high level design overviews and core/custom plugin documentation. This shoul
 
 [Gst-inspect-1.0 Documentation](https://gstreamer.freedesktop.org/documentation/tools/gst-inspect.html?gi-language=c)
 
+[Example Pipelines](https://gist.github.com/hum4n0id/2760d987a5a4b68c24256edd9db6b42b)
+
 Command line access to plugin documentation and allows you to query your own custom plugins to check:
 
 - Description
