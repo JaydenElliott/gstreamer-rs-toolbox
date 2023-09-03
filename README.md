@@ -110,14 +110,20 @@ Tracers are extremely useful for monitoring pipeline throughput, element latency
 
 - [Gstreamer tracing docs](https://gstreamer.freedesktop.org/documentation/additional/design/tracing.html?gi-language=c)
   - Not great but has some good [examples](https://gstreamer.freedesktop.org/documentation/additional/design/tracing.html?gi-language=c#try-it) of usage. These will work directly with a rust application.
-- [GstShark Tracer Plugins](https://developer.ridgerun.com/wiki/index.php/GstShark_-_Tracers)
 
+- [Rust tracing integration](https://github.com/standard-ai/tracing-gstreamer)
+   - Better formatted logs using `fmttracing`
+   - `chrometracer` for pipeline profiling. Use a tool like [perfetto](https://ui.perfetto.dev/) to visualise the results
+   
+- [GstShark Tracer Plugins](https://developer.ridgerun.com/wiki/index.php/GstShark_-_Tracers)
   - Set of plugins that extend/replace some of the core gstreamer ones. Very well documented.
 
 - [todo - tracer graphs (not pipeline ones)](https://gstreamer.freedesktop.org/documentation/check/gstharness.html?gi-language=c)
 
 - [todo - devtool tracer parser](https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tree/main/subprojects/gst-devtools/tracer)
   - have been unable to get this working
+ 
+
 
 <br>
 
