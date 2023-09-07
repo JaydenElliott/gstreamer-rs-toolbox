@@ -122,7 +122,11 @@ Tracers are extremely useful for monitoring pipeline throughput, element latency
 
 - [todo - devtool tracer parser](https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tree/main/subprojects/gst-devtools/tracer)
   - have been unable to get this working
- 
+
+ ## Measuring Video and Performance
+
+ - [todo - write up on other tools]
+ - [Measure framerate, bitrate and CPU usage](https://github.com/RidgeRun/gst-perf)
 
 
 <br>
