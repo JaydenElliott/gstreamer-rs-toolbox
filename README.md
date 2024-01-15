@@ -14,20 +14,21 @@ A collection of useful documentation, tools, code snippets and articles for writ
    - [Gst-inspect-1.0](#gst-inspect-10-cli)
    - [Rust Bindings](#rust-bindings)
    - [Rust Plugins](#rust-plugins)
-3. [Observability](#observability)
+3. [Common Questions](#common-questions)
+4. [Observability](#observability)
    - [Tracers](#tracers)
    - [Dot Graphs](#dot-graphs)
-4. [Debugging Pipelines](#debugging-pipelines)
+5. [Debugging Pipelines](#debugging-pipelines)
    - [GST_DEBUG](#gst_debug)
    - [Debug Probe](#debugprobe-plugin)
    - [Gst Devtools](#debugprobe-plugin)
    - [GstShark](#gstshark)
-5. [Profiling and Optimisation](#primary-sources)
-6. [Testing](#testing)
+6. [Profiling and Optimisation](#primary-sources)
+7. [Testing](#testing)
    - [GstHarness](#gstharness)
    - [GstValidate](#gstvalidate)
-7. [Nvidia Deepstream](#nvidia-deepstream)
-8. [IDE / Environment](#environment-setup)
+8. [Nvidia Deepstream](#nvidia-deepstream)
+9. [IDE / Environment](#environment-setup)
 
 <br>
 
@@ -102,6 +103,14 @@ Contains endless plugin examples, a great tutorial and is constantly active. Cor
 
 <br>
 
+# Common Questions
+
+## Difference between a `Message` and an `Event`
+
+Messages are passed directly to the applications message bus. Events are passed up/down the pipeline and can trigger events.
+
+For example, a QOS event send out by a sink at the end of your pipeline, could be received by a decoder who would send a `Message` to the message bus with stats on how many frames it has processed and dropped.
+ 
 # Observability
 
 ## Tracers
