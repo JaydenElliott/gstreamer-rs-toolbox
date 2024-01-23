@@ -103,9 +103,7 @@ Contains endless plugin examples, a great tutorial and is constantly active. Cor
 
 <br>
 
-# Common Questions
-
-## Difference between a `Message` and an `Event`
+# Messages and Events
 
 Messages are passed directly to the applications message bus. Events are passed up/down the pipeline and can trigger events.
 
