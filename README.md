@@ -226,3 +226,9 @@ todo: vscode devcontainer setup for gstreamer/nvidia
 todo: nvim container setup
 
 <br>
+
+# TODO 
+- split up into files
+- timestamps
+    - https://stackoverflow.com/questions/76997707/why-doesnt-the-pts-retrieved-from-gstreamer-doesnt-match-saved-ts
+    - https://stackoverflow.com/questions/74367999/how-to-correlate-a-gstreamer-buffer-timestamp-with-the-linux-system-clock
