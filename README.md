@@ -129,6 +129,16 @@ Tracers are extremely useful for monitoring pipeline throughput, element latency
 
 - [todo - devtool tracer parser](https://gitlab.freedesktop.org/gstreamer/gstreamer/-/tree/main/subprojects/gst-devtools/tracer)
   - have been unable to get this working
+ 
+
+### Tracing hooks
+Hooks are functions that provide access to buffers are different stages of an element's or pipeline's lifetime.
+
+This diagram from the [probe documentation](https://gstreamer.freedesktop.org/documentation/additional/design/probes.html?gi-language=c#push-dataflow) provides a nice overview of where some of these hooks reside in the element's push cycle.
+
+
+<img src="https://github.com/user-attachments/assets/d98e12b4-95b0-4c07-aeaf-842ba27f70df" width="700">
+
 
  ## Measuring Video and Performance
 
