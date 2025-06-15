@@ -34,13 +34,20 @@ A collection of useful documentation, tools, code snippets and articles for writ
 
 ## Start Here
 
-Todo
 
-[Rust Tutorial](https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/tree/main/tutorial)
+Prepare to read **a lot** of plugin implementations and examples. Although there is a fair bit of documentation, it won't answer a lot of questions you will have about specifics. 
 
-Prepare to read **a lot** of plugin implementations and examples. Although there is a fair bit of documentation, it won't answer a lot of questions you will have about specifics. My usual workflow for findings answers is:
+A **TLDR** on useful resoruces:
+1. Plugin docs with `gst-inspect-1.0 $PLUGIN_NAME` for quick input/output/properties reference.
+2. [gst-plugins-rs repo](https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs) for example rust plugin implementations.
+3. [Gstreamer Docs](https://gstreamer.freedesktop.org/documentation/)
+4. [Gstreamer Discourse](https://discourse.gstreamer.org) forum.
+
 
 <br>
+
+## Tutorials
+- Great [gstreamer rust tutorial](https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/tree/main/tutorial). 
 
 # Primary Sources
 
